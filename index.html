@@ -73,18 +73,21 @@
 
     .fondo-decorativo {
       width: 100%;
+      height: 100vh; /* ocupará toda la pantalla */
       display: flex;
       justify-content: center;
-      margin-top: 30px;
+      align-items: start; /* para que la imagen quede arriba */
       overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .fondo-decorativo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* hace que se adapte y ocupe toda el área sin deformarse */
     }
 
-    .fondo-decorativo img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      object-fit: contain;
-    }
 
 
     /* Responsive */
