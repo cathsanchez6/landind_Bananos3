@@ -16,10 +16,7 @@
     min-height: 100vh;
     background-color: #f5f7f9;
   
-    background-image: url('fondo-inferior.png'); /* Tu nueva imagen */
-    background-repeat: no-repeat;
     background-position: bottom center;
-    background-size: contain;  /* 👈 Aquí está el cambio importante */
     
     display: flex;
     flex-direction: column;
@@ -68,6 +65,21 @@
       font-style: italic;
       font-size: 0.95rem;
     }
+    .footer-bg {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: -1; 
+    }
+    
+    .footer-bg img {
+      width: 100%;
+      max-height: 200px; 
+      object-fit: cover;
+      display: block;
+    }
+
 
     @media (max-width: 480px) {
       .card {
@@ -93,5 +105,9 @@
       <span>Product Of Ecuador - Produit De L'Équateur</span>
     </div>
   </div>
+  <div class="footer-bg">
+  <img src="assets/banner-del-monte.png" alt="Decoración inferior">
+</div>
+
 </body>
 </html>
