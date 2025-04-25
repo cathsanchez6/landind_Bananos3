@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Del Monte Info</title>
   <style>
     * {
@@ -23,18 +24,21 @@
     }
 
     .fondo-decorativo {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       z-index: 0;
+      pointer-events: none;
     }
 
     .fondo-decorativo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transform: translateZ(-1px) scale(1.1);
+      will-change: transform;
     }
 
     .contenido {
@@ -44,21 +48,21 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100%;
-      text-align: center;
+      height: 100vh;
       padding: 20px;
+      text-align: center;
     }
 
     .logo {
-      max-width: 120px;
+      max-width: 100px;
       margin-bottom: 20px;
     }
 
     .card {
       background: white;
-      border-radius: 16px;
+      border-radius: 20px;
       padding: 30px 40px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
       max-width: 400px;
       width: 100%;
     }
@@ -66,6 +70,7 @@
     h2 {
       color: #007a33;
       margin-bottom: 20px;
+      font-size: 1.5rem;
     }
 
     .campo {
@@ -76,14 +81,31 @@
     .campo b {
       display: block;
       margin-bottom: 5px;
+      font-size: 0.95rem;
     }
 
     .campo span {
-      background: #f1f1f1;
+      background: #f4f4f4;
       display: block;
-      padding: 8px 12px;
-      border-radius: 8px;
+      padding: 10px 14px;
+      border-radius: 10px;
       font-style: italic;
+      font-size: 0.95rem;
+    }
+
+    /* Responsivo */
+    @media (max-width: 480px) {
+      .logo {
+        max-width: 80px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
     }
   </style>
 </head>
@@ -109,4 +131,3 @@
   </div>
 </body>
 </html>
-
