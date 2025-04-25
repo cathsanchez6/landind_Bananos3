@@ -16,7 +16,7 @@
       min-height: 100vh;
       background-color: #f5f7f9;
       position: relative;
-      padding: 40px 20px 300px; /* espacio inferior para que no tape el fondo */
+      padding: 40px 20px 280px; /* espacio inferior reducido */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -72,10 +72,10 @@
       background-size: cover;
       background-position: bottom center;
       position: absolute;
-      bottom: 0;
+      bottom: -40px; 
       left: 0;
       width: 100%;
-      height: 280px; /* ajusta si tu imagen es más alta o baja */
+      height: 280px;
       z-index: 0;
     }
 
@@ -89,7 +89,14 @@
       }
 
       .footer-bg {
-        height: 200px;
+        height: 220px;
+        bottom: -20px;
+        background-size: 100% auto; /* ajusta al ancho del móvil */
+        background-position: bottom center;
+      }
+
+      body {
+        padding-bottom: 240px; 
       }
     }
   </style>
