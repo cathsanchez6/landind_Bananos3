@@ -72,22 +72,19 @@
     }
 
     .fondo-decorativo {
-      width: 100vw; /* Abarca toda la ventana del navegador */
-      overflow: hidden;
-      margin-top: 2px
-      z-index: 5;
-      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
       margin-top: 30px;
+      overflow: hidden;
     }
 
     .fondo-decorativo img {
-      width: 100vw;
+      max-width: 100%;
       height: auto;
       display: block;
-      object-fit: cover; /* Mantendra la escala de la imagen sin deformarla */
-      max-height: 200px;
+      object-fit: contain;
     }
-
 
 
     /* Responsive */
