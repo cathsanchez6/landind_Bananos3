@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Del Monte Informacion</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Del Monte Información</title>
   <style>
     * {
       box-sizing: border-box;
@@ -11,24 +11,23 @@
       padding: 0;
     }
 
-     body {
-    font-family: 'Segoe UI', sans-serif;
-    min-height: 100vh;
-    background-color: #f5f7f9;
-  
-    background-position: bottom center;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-  }
-
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      background-color: #f5f7f9;
+      position: relative;
+      padding: 40px 20px 300px; /* espacio inferior para que no tape el fondo */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+    }
 
     .logo {
       width: 100px;
       margin-bottom: 20px;
+      z-index: 1;
     }
 
     .card {
@@ -38,7 +37,8 @@
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
       max-width: 420px;
       width: 100%;
-      z-index: 0;
+      z-index: 1;
+      position: relative;
     }
 
     h2 {
@@ -65,19 +65,19 @@
       font-style: italic;
       font-size: 0.95rem;
     }
-    .footer-bg {
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-      margin-top: 40px; 
-    }
-    
-    .footer-bg img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
 
+    .footer-bg {
+      background-image: url('assets/banner-del-monte.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 280px; /* ajusta si tu imagen es más alta o baja */
+      z-index: 0;
+    }
 
     @media (max-width: 480px) {
       .card {
@@ -87,11 +87,15 @@
       .logo {
         width: 80px;
       }
+
+      .footer-bg {
+        height: 200px;
+      }
     }
   </style>
 </head>
 <body>
-  <img src="assets/logo.png" alt="Del Monte Logo" class="logo"> 
+  <img src="assets/logo.png" alt="Del Monte Logo" class="logo"/>
   <div class="card">
     <h2>Información</h2>
     <div class="campo">
@@ -103,10 +107,6 @@
       <span>Product Of Ecuador - Produit De L'Équateur</span>
     </div>
   </div>
-  <div class="footer-bg">
-    <img src="assets/banner-del-monte.png" alt="Decoración inferior">
-  </div>
-
-
+  <div class="footer-bg"></div>
 </body>
 </html>
