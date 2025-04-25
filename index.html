@@ -11,20 +11,23 @@
       padding: 0;
     }
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      min-height: 100vh;
-      background-color: #f5f7f9;
-      background-image: url('assets/banner-del-monte.png'); 
-      background-repeat: no-repeat;
-      background-position: bottom center;
-      background-size: cover;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 20px;
-    }
+     body {
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    background-color: #f5f7f9;
+  
+    background-image: url('fondo-inferior.png'); /* Tu nueva imagen */
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;  /* 👈 Aquí está el cambio importante */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
 
     .logo {
       width: 100px;
