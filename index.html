@@ -72,8 +72,10 @@
     }
 
     .fondo-decorativo {
-      width: 100%;
-      margin-top: 0px; /* sube un poco para que pegue */
+      position: relative;
+      width: 100vw;
+      height: auto;
+      overflow: hidden;
       z-index: 5;
     }
 
@@ -81,9 +83,9 @@
       width: 100%;
       height: auto;
       display: block;
-      max-height: 100px; /* controlamos que no sea tan alta */
-      object-fit: scale-down;
+      object-fit: contain;
     }
+
 
     /* Responsive */
     @media (max-width: 600px) {
@@ -128,8 +130,7 @@
   </div>
 
   <div class="fondo-decorativo">
-    <img src="assets/banner-del-monte.png" alt="Banner decorativo">
+  <img src="assets/banner-del-monte.png" alt="Banner decorativo">
   </div>
-
 </body>
 </html>
